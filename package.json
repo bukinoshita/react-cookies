@@ -1,0 +1,45 @@
+{
+  "name": "react-cookies",
+  "version": "0.0.0",
+  "description": "Load and save cookies with React",
+  "main": "index.js",
+  "repository": "git@github.com:bukinoshita/react-cookies.git",
+  "author": "Bu Kinoshita <bukinoshita@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint --ext .js .",
+    "test": "npm run lint && node_modules/.bin/jest",
+    "watch": "node_modules/.bin/jest --watch",
+    "build": "node_modules/.bin/babel src -d build --ignore __tests__"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "dependencies": {
+    "cookie": "^0.3.1",
+    "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-cyprex": "^1.1.2",
+    "eslint-plugin-flowtype": "^2.32.1",
+    "ghooks": "^2.0.0",
+    "jest": "^19.0.2"
+  },
+  "keywords": [
+    "cookie",
+    "cookies",
+    "react",
+    "reactjs",
+    "jsx"
+  ]
+}
