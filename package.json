@@ -2,7 +2,7 @@
   "name": "react-cookies",
   "version": "0.0.0",
   "description": "Load and save cookies with React",
-  "main": "index.js",
+  "main": "build/cookie.js",
   "repository": "git@github.com:bukinoshita/react-cookies.git",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
