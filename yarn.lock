@@ -1233,6 +1233,12 @@ eslint-config-cyprex@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/eslint-config-cyprex/-/eslint-config-cyprex-1.1.2.tgz#307224af6ba088e9c37e58d1514aa7d011012362"
 
+eslint-plugin-flowtype@^2.32.1:
+  version "2.32.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.32.1.tgz#bbee185dedf97e5f63ec975cdcddd199bd2a2501"
+  dependencies:
+    lodash "^4.15.0"
+
 eslint@^3.19.0:
   version "3.19.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.19.0.tgz#c8fc6201c7f40dd08941b87c085767386a679acc"
@@ -2285,7 +2291,7 @@ lodash.clone@4.3.2:
   dependencies:
     lodash._baseclone "~4.5.0"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
