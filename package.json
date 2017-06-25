@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "node_modules/.bin/eslint --ext .js .",
-    "test": "node_modules/.bin/jest",
+    "test": "npm run lint && node_modules/.bin/jest",
     "watch": "node_modules/.bin/jest --watch",
     "build": "node_modules/.bin/babel src -d build --ignore __tests__"
   },

@@ -15,7 +15,7 @@ describe('react-cookie', () => {
     it('should load all cookiee', () => {
       cookie.setRawCookie('test=test');
       cookie.setRawCookie('test2=test2');
-      expect(typeof cookie.loadAll()).toBe('object')
+      expect(typeof cookie.loadAll()).toBe('object');
     });
 
     it('should parse if an object', () => {
