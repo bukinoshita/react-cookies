@@ -5,41 +5,62 @@
   "main": "build/cookie.js",
   "repository": "git@github.com:bukinoshita/react-cookies.git",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
-  "license": "MIT",
   "scripts": {
-    "lint": "node_modules/.bin/eslint --ext .js .",
+    "lint": "xo --quiet",
     "test": "npm run lint && node_modules/.bin/jest",
     "watch": "node_modules/.bin/jest --watch",
-    "build": "node_modules/.bin/babel src -d build --ignore __tests__"
+    "build": "node_modules/.bin/babel src -d build --ignore __tests__",
+    "precommit": "lint-staged"
   },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm test"
-    }
-  },
+  "keywords": [
+    "react-cookies",
+    "react-cookie",
+    "cookie",
+    "cookies",
+    "react",
+    "reactjs",
+    "jsx"
+  ],
   "dependencies": {
     "cookie": "^0.3.1",
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
     "babel-jest": "^19.0.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
-    "eslint": "^3.19.0",
-    "eslint-config-cyprex": "^1.1.2",
-    "eslint-plugin-flowtype": "^2.32.1",
-    "ghooks": "^2.0.0",
-    "jest": "^19.0.2"
+    "eslint-config-prettier": "^2.2.0",
+    "husky": "^0.14.1",
+    "jest": "^19.0.2",
+    "lint-staged": "^4.0.0",
+    "prettier": "^1.4.4",
+    "xo": "^0.18.2"
   },
-  "keywords": [
-    "cookie",
-    "cookies",
-    "react",
-    "reactjs",
-    "jsx"
-  ]
+  "xo": {
+    "space": true,
+    "esnext": true,
+    "semicolon": false,
+    "ignores": [
+      "build/*.js",
+      "__tests__/*.js"
+    ],
+    "globals": [
+      "document"
+    ],
+    "rules": {
+      "func-names": 0,
+      "object-curly-spacing": 0
+    }
+  },
+  "lint-staged": {
+    "src/*.js": [
+      "npm run test",
+      "prettier --semi false --single-quote --write",
+      "git add"
+    ]
+  },
+  "license": "MIT"
 }
