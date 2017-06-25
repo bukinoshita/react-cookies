@@ -97,8 +97,8 @@ Returns an `object` containing all cookies.
 import cookie from 'react-cookies'
 
 componentWillMount() {
-  this.state =  { token: cookie.loadAll() }
-  // => { token: 123456789, _ga: GA198712 }
+  this.state =  { cookies: cookie.loadAll() }
+  // => { cookies: { token: 123456789, _ga: GA198712 } }
 }
 ```
 
