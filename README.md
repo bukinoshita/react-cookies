@@ -1,7 +1,7 @@
-# react-cookies
+# react-cookies [![Build Status](https://travis-ci.org/bukinoshita/react-cookies.svg?branch=master)](https://travis-ci.org/bukinoshita/react-cookies)
 > Load and save cookies with React
 
-React cookies is the v1.0.4 of react-cookie.s
+React cookies is the v1.0.4 of react-cookie
 
 ## Install
 ```bash
