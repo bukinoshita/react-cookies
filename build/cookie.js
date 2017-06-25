@@ -26,7 +26,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var IS_NODE = typeof document === 'undefined' || process && process.env && process.env.NODE_ENV === 'test';
 var _rawCookie = {};
-var _res = undefined;
+var _res = void 0;
 
 function _isResWritable() {
   return _res && !_res.headersSent;
@@ -43,7 +43,7 @@ function load(name, doNotParse) {
   if (!doNotParse) {
     try {
       cookieVal = JSON.parse(cookieVal);
-    } catch (e) {
+    } catch (err) {
       // Not serialized object
     }
   }
@@ -62,7 +62,7 @@ function loadAll(doNotParse) {
   if (!doNotParse) {
     try {
       cookieVal = JSON.parse(cookieVal);
-    } catch (e) {
+    } catch (err) {
       // Not serialized object
     }
   }
@@ -95,7 +95,7 @@ function select(regex) {
 function save(name, val, opt) {
   _rawCookie[name] = val;
 
-  // allow you to work with cookies as objects.
+  // Allow you to work with cookies as objects.
   if ((typeof val === 'undefined' ? 'undefined' : _typeof(val)) === 'object') {
     _rawCookie[name] = JSON.stringify(val);
   }
