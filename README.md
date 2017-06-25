@@ -108,6 +108,8 @@ componentWillMount() {
 Find all the cookies with a name that match the regex.<br />
 Returns an `object` with the cookie name as the key.
 
+#### Example
+
 ```js
 import cookie from 'react-cookies'
 
