@@ -18,6 +18,10 @@ Load the cookie value.<br />
 Returns `undefined` if the cookie does not exist.<br />
 Deserialize any cookie starting with { or [ unless `dotNotParse` is `true`.
 
+### loadAll()
+Load all cookies available.
+
+Returns an `object` containing all cookies.
 
 ### select([regex])
 Find all the cookies with a name that match the regex.<br />

@@ -28,6 +28,25 @@ export function load(name, doNotParse) {
   return cookieVal;
 }
 
+export function loadAll(doNotParse) {
+  const cookies = IS_NODE ? _rawCookie : cookie.parse(document.cookie);
+  let cookieVal = cookies;
+
+  if (typeof doNotParse === 'undefined') {
+    doNotParse = !cookieVal || (cookieVal[0] !== '{' && cookieVal[0] !== '[');
+  }
+
+  if (!doNotParse) {
+    try {
+      cookieVal = JSON.parse(cookieVal);
+    } catch(e) {
+      // Not serialized object
+    }
+  }
+
+  return cookieVal;
+}
+
 export function select(regex) {
   const cookies = IS_NODE ? _rawCookie : cookie.parse(document.cookie);
 
@@ -123,6 +142,7 @@ export function plugToRequest(req, res) {
 export default {
   setRawCookie,
   load,
+  loadAll,
   select,
   save,
   remove,

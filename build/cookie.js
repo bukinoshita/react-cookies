@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 exports.load = load;
+exports.loadAll = loadAll;
 exports.select = select;
 exports.save = save;
 exports.remove = remove;
@@ -34,6 +35,25 @@ function _isResWritable() {
 function load(name, doNotParse) {
   var cookies = IS_NODE ? _rawCookie : _cookie2.default.parse(document.cookie);
   var cookieVal = cookies && cookies[name];
+
+  if (typeof doNotParse === 'undefined') {
+    doNotParse = !cookieVal || cookieVal[0] !== '{' && cookieVal[0] !== '[';
+  }
+
+  if (!doNotParse) {
+    try {
+      cookieVal = JSON.parse(cookieVal);
+    } catch (e) {
+      // Not serialized object
+    }
+  }
+
+  return cookieVal;
+}
+
+function loadAll(doNotParse) {
+  var cookies = IS_NODE ? _rawCookie : _cookie2.default.parse(document.cookie);
+  var cookieVal = cookies;
 
   if (typeof doNotParse === 'undefined') {
     doNotParse = !cookieVal || cookieVal[0] !== '{' && cookieVal[0] !== '[';
@@ -144,6 +164,7 @@ function plugToRequest(req, res) {
 exports.default = {
   setRawCookie: setRawCookie,
   load: load,
+  loadAll: loadAll,
   select: select,
   save: save,
   remove: remove,

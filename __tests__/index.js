@@ -12,9 +12,10 @@ describe('react-cookie', () => {
       }).not.toThrowError();
     });
 
-    it('should read the cookie', () => {
+    it('should load all cookiee', () => {
       cookie.setRawCookie('test=test');
-      expect(cookie.load('test')).toBe('test');
+      cookie.setRawCookie('test2=test2');
+      expect(typeof cookie.loadAll()).toBe('object')
     });
 
     it('should parse if an object', () => {
