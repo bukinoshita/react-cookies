@@ -51,7 +51,8 @@
       "document"
     ],
     "rules": {
-      "func-names": 0
+      "func-names": 0,
+      "object-curly-spacing": 0
     }
   },
   "lint-staged": {
