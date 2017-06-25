@@ -112,30 +112,6 @@ Returns an `object` with the cookie name as the key.
 
 Set a cookie
 
-#### Example
-
-```js
-import cookie from 'react-cookies'
-
-handleButtonClick() {
-  const expires = new Date()
-  expires.setDate(now.getDate() + 14)
-
-  cookie.save(
-    'userId',
-    '1234',
-    {
-      path: '/',
-      expires,
-      maxAge: 1000,
-      domain: 'https://play.bukinoshita.io',
-      secure: true
-      httpOnly: true
-    }
-  )
-}
-```
-
 #### name
 
 Type: `string`
@@ -190,20 +166,34 @@ If set `true` it will only be accessible on the server.
 
 Type: `boolean`
 
-
-### .remove(name, [options])
-
-Remove a cookie.
-
 #### Example
 
 ```js
 import cookie from 'react-cookies'
 
 handleButtonClick() {
-  cookie.remove('userId', { path: '/' })
+  const expires = new Date()
+  expires.setDate(now.getDate() + 14)
+
+  cookie.save(
+    'userId',
+    '1234',
+    {
+      path: '/',
+      expires,
+      maxAge: 1000,
+      domain: 'https://play.bukinoshita.io',
+      secure: true
+      httpOnly: true
+    }
+  )
 }
 ```
+
+
+### .remove(name, [options])
+
+Remove a cookie.
 
 #### name
 
@@ -253,6 +243,16 @@ Type: `boolean`
 If set `true` it will only be accessible on the server.
 
 Type: `boolean`
+
+#### Example
+
+```js
+import cookie from 'react-cookies'
+
+handleButtonClick() {
+  cookie.remove('userId', { path: '/' })
+}
+```
 
 
 ### .plugToRequest(req, res): unplug()
