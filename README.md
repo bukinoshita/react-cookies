@@ -67,12 +67,12 @@ Deserialize any cookie starting with `{` or `[` unless `dotNotParse` is `true`.
 
 #### name
 
-Type: `string`
+Type: `string`<br/>
 Required
 
 #### doNotParse
 
-Type: `boolean`
+Type: `boolean`<br/>
 Default: false
 
 #### Example
@@ -110,16 +110,16 @@ Returns an `object` with the cookie name as the key.
 
 ### .save(name, value, [options])
 
-Set a cookie
+Set a cookie.
 
 #### name
 
-Type: `string`
+Type: `string`<br/>
 Required
 
 #### value
 
-Type: `string`||`number`||`object`
+Type: `string`||`number`||`object`<br/>
 Required
 
 #### options
@@ -143,7 +143,7 @@ Type: `object (date)`
 
 ##### maxAge
 
-Relative max age of the cookie from when the client receives it in `seconds`
+Relative max age of the cookie from when the client receives it in `seconds`.
 
 Type: `number`
 
@@ -197,7 +197,7 @@ Remove a cookie.
 
 #### name
 
-Type: `string`
+Type: `string`<br/>
 Required
 
 #### options
@@ -221,7 +221,7 @@ Type: `object (date)`
 
 ##### maxAge
 
-Relative max age of the cookie from when the client receives it in `seconds`
+Relative max age of the cookie from when the client receives it in `seconds`.
 
 Type: `number`
 
