@@ -108,6 +108,15 @@ componentWillMount() {
 Find all the cookies with a name that match the regex.<br />
 Returns an `object` with the cookie name as the key.
 
+```js
+import cookie from 'react-cookies'
+
+componentWillMount() {
+  this.state =  { tests: cookie.select(/\btest(er|ing|ed|s)?\b/g) }
+  // => { tests: { test: 'test', 'testing': 'testing' } }
+}
+```
+
 ### .save(name, value, [options])
 
 Set a cookie.
