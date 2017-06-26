@@ -50,7 +50,7 @@ class MyApp extends Component {
 }
 ```
 
-_React cookies is the v1.0.4 of react-cookie with a couple of changes._
+_React cookies is the v1.0.4 of react-cookie with a couple changes._
 
 ## Isomorphic cookies!
 
