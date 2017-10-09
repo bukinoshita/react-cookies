@@ -184,7 +184,7 @@ import cookie from 'react-cookies'
 
 handleButtonClick() {
   const expires = new Date()
-  expires.setDate(now.getDate() + 14)
+   expires.setDate(Date.now() + 1000 * 60 * 60 * 24 * 14);
 
   cookie.save(
     'userId',
