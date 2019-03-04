@@ -24,7 +24,7 @@ var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var IS_NODE = typeof document === 'undefined' || process && process.env && process.env.NODE_ENV === 'test';
+var IS_NODE = typeof document === 'undefined' || typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 'test';
 var _rawCookie = {};
 var _res = void 0;
 
