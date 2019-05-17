@@ -5,7 +5,9 @@ import objectAssign from 'object-assign'
 
 const IS_NODE =
   typeof document === 'undefined' ||
-  (process && process.env && process.env.NODE_ENV === 'test')
+  (typeof process !== 'undefined' &&
+    process.env &&
+    process.env.NODE_ENV === 'test')
 let _rawCookie = {}
 let _res
 
