@@ -72,7 +72,7 @@ Get a cookie.
 
 #### name
 
-The cookie name
+The cookie name.
 
 Type: `string`<br />
 Required
@@ -83,7 +83,7 @@ Remove a cookie.
 
 #### name
 
-The cookie name
+The cookie name.
 
 Type: `string`<br />
 Required
