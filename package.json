@@ -2,65 +2,48 @@
   "name": "react-cookies",
   "version": "0.1.1",
   "description": "Load and save cookies with React",
-  "main": "build/cookie.js",
-  "repository": "git@github.com:bukinoshita/react-cookies.git",
+  "main": "index.js",
+  "repository": "bukinoshita/react-cookies",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "lint": "xo --quiet",
-    "test": "npm run lint && node_modules/.bin/jest",
-    "watch": "node_modules/.bin/jest --watch",
-    "build": "node_modules/.bin/babel src -d build --ignore __tests__",
-    "precommit": "lint-staged"
+    "test": "xo"
   },
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "keywords": [
     "react-cookies",
     "react-cookie",
     "cookie",
     "cookies",
-    "react",
-    "reactjs",
-    "jsx"
+    "react"
   ],
   "dependencies": {
-    "cookie": "^0.3.1",
-    "object-assign": "^4.1.1"
+    "cookie": "^0.4.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-jest": "^19.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-register": "^6.24.1",
-    "eslint-config-prettier": "^2.2.0",
-    "husky": "^0.14.1",
-    "jest": "^19.0.2",
-    "lint-staged": "^4.0.0",
-    "prettier": "^1.4.4",
-    "xo": "^0.18.2"
+    "ava": "^1.4.1",
+    "eslint-config-prettier": "^4.3.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
+    "xo": "^0.24.0"
   },
   "xo": {
-    "space": true,
-    "esnext": true,
-    "semicolon": false,
-    "ignores": [
-      "build/*.js",
-      "__tests__/*.js"
+    "extends": [
+      "prettier"
     ],
     "globals": [
       "document"
-    ],
-    "rules": {
-      "func-names": 0,
-      "object-curly-spacing": 0
-    }
+    ]
   },
   "lint-staged": {
-    "src/*.js": [
-      "npm run test",
+    "*.js": [
+      "yarn test",
       "prettier --semi false --single-quote --write",
       "git add"
     ]
-  },
-  "license": "MIT"
+  }
 }
