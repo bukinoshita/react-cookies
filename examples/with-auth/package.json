@@ -1,0 +1,16 @@
+{
+  "name": "with-auth",
+  "version": "1.0.0",
+  "description": "React cookies with auth",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-cookies": "latest",
+    "react-dom": "^16.8.6"
+  }
+}
