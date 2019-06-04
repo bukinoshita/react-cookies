@@ -2,6 +2,8 @@
 
 > Load and save cookies with React
 
+### ⚠️ If you're looking for [react-cookies@0.1.1](https://github.com/bukinoshita/react-cookies/tree/v0.1.1). ⚠️
+
 ## Install
 
 ```bash
