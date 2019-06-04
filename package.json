@@ -37,6 +37,9 @@
     ],
     "globals": [
       "document"
+    ],
+    "ignores": [
+      "examples"
     ]
   },
   "lint-staged": {
