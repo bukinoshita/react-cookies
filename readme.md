@@ -1,38 +1,11 @@
-# react-cookies [![Build Status](https://travis-ci.org/bukinoshita/react-cookies.svg?branch=master)](https://travis-ci.org/bukinoshita/react-cookies)
+# react-cookies
 
 > Load and save cookies with React
-
-### ⚠️ If you're looking for [react-cookies@0.1.1](https://github.com/bukinoshita/react-cookies/tree/v0.1.1). ⚠️
 
 ## Install
 
 ```bash
 $ yarn add react-cookies
-```
-
-## Quick start
-
-```js
-// Packages
-import React from 'react'
-import { setCookie, getCookie, removeCookie } from 'react-cookies'
-
-class Example extends Component {
-  componentDidMount() {
-    setCookie('my-cookie', 'my-cookie-value', {
-      maxAge: 30 * 24 * 60 * 60,
-      path: '/'
-    })
-
-    getCookie('my-cookie')
-
-    removeCookie('my-cookie')
-  }
-
-  render() {
-    return <h1>My example</h1>
-  }
-}
 ```
 
 ## API
@@ -96,4 +69,4 @@ Get all cookies.
 
 ## License
 
-[MIT](https://github.com/bukinoshita/react-cookies/blob/master/license) &copy; Bu Kinoshita
+MIT © [Bu Kinoshita](https://bukinoshita.com)
