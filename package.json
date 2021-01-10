@@ -31,7 +31,7 @@
   "devDependencies": {
     "@sindresorhus/tsconfig": "0.7.0",
     "@types/cookie": "0.4.0",
-    "@types/jest": "26.0.15",
+    "@types/jest": "26.0.20",
     "@types/node": "14.11.10",
     "jest": "26.5.3",
     "ts-jest": "26.4.3",
